@@ -17,14 +17,16 @@ const flightSchema = new Schema({
         min: 10,
         max: 9999,
     },
-    departs: {
-        type: Date,
-        default: function() {
-            // whatever is returned is assigned
-            // to date created+1
-            return new Date().getFullYear()++;
-        }
-    }
+    // departs: {
+    //     type: String,
+    //     default: function() {
+    //         // whatever is returned is assigned
+    //         // to date created+1
+    //         return new Date().getFullYear()++;
+    //       }
+    // }
 });
+
+
 
 module.exports = mongoose.model('Flight', flightSchema);
