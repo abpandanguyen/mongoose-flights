@@ -8,7 +8,6 @@ module.exports = {
 
 function create(req, res) {
     const flight = new Flight(req.body);
-    console.log(flight);
     flight.save(function(err) {
         // if we dont redirect, new page will
         // be shown with /flights in the address bar
