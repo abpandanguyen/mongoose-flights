@@ -11,6 +11,14 @@
     <%= d.airport %> ||
     <%= d.arrivals %>
     </li>
+  </div>
+  <% }) %>
+  <div>Ticket List: <% tickets.forEach(function(t) { %>
+    <li>Seat: 
+    <%= t.seat %> || Price: 
+    <%= t.price %>
+    </li>
+  </div>
   <% }) %>
 </section>
 
@@ -32,5 +40,11 @@
   </label><br>
   <input type="submit" value="Add Destination">
 </form>
+
+<br><br>
+<form action="/flights/<%= flight._id %>/tickets/new">
+    <input type="submit" value="Add a Ticket">
+</form> 
+
 
 <%- include('../partials/footer')%>
