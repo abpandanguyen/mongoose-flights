@@ -1,8 +1,39 @@
 body {
-  padding: 50px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 50px 1fr;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body > nav {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding: 10px;
+}
+
+#specific-flight {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+#new-form {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 10rem;
+  padding: 10px;
 }
 
 a {
   color: #00B7FF;
+}
+
+a:hover {
+  color: purple;
 }

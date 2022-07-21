@@ -1,12 +1,12 @@
 <%- include('../partials/header')%>
 
 
-<section>
+<section id="specific-flight">
   <div>Airline: <%= flight.airline %></div>
   <div>Airport: <%= flight.airport %></div>
   <div>Flight No: <%= flight.flightNo %></div>
   <div>Depart: <%= flight.departs %></div>
-  <div>Destinations: <% flight.destinations.forEach(function(d) { %>
+  <div>Destination(s): <% flight.destinations.forEach(function(d) { %>
     <li>
     <%= d.airport %> ||
     <%= d.arrivals %>
@@ -21,9 +21,9 @@
   </div>
   <% }) %>
 </section>
-
-<br><br><h2>Add a Destination</h2>
+<h2>Add a Destination</h2>
 <form 
+  id="new-form"
   action="/flights/<%= flight._id %>/destinations"
   method="POST">
   <label>Airport:</label>
@@ -42,7 +42,7 @@
 </form>
 
 <br><br>
-<form action="/flights/<%= flight._id %>/tickets/new">
+<form id="add-ticket-button" action="/flights/<%= flight._id %>/tickets/new">
     <input type="submit" value="Add a Ticket">
 </form> 
 
